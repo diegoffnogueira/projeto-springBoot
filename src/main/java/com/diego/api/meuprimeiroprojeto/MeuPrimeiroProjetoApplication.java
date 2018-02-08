@@ -1,5 +1,6 @@
 package com.diego.api.meuprimeiroprojeto;
 
+import com.diego.api.utils.SenhaUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +21,14 @@ public class MeuPrimeiroProjetoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(){
 		return args -> {
-			System.out.println("### Quantidade de elementos por página = " + this.qtdPorPagina);
+			String senhaEncoded =null;
+			senhaEncoded = SenhaUtils.gerarBcrypt("123456");
+			System.out.println("### Senha encoded: " + senhaEncoded);
+
+			senhaEncoded = SenhaUtils.gerarBcrypt("123456");
+			System.out.println("### Senha encoded novamente: " + senhaEncoded);
+
+			System.out.println("### Senha válida: " + SenhaUtils.senhaValida("123456", senhaEncoded));
 		};
 	}
 }
