@@ -5,7 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class SenhaUtils {
 
     /**
-     * Gera um hash utilizando o Bcrypt
+     * Gera um hash utilizando o Bcrypt.
      *
      * @param senha
      * @return
@@ -20,7 +20,7 @@ public class SenhaUtils {
 
     /**
      *
-     * Verifica se a senha é valida
+     * Verifica se a senha é valida.
      *
      * @param senha
      * @param senhaEncoded
