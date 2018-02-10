@@ -36,32 +36,27 @@ public class Application {
 			System.out.println("### Senha encoded novamente: " + senhaEncoded);
 			System.out.println("### Senha válida: " + SenhaUtils.senhaValida("123456", senhaEncoded));
 
-			Empresa empresa = new Empresa();
-			empresa.setRazaoSocial("Diego Company");
-			empresa.setCnpj("43423142356776");
-
-			this.empresaRepository.save(empresa);
-
-			List<Empresa> empresas = empresaRepository.findAll();
-			empresas.forEach(System.out::println);
-
-			Empresa empresaDB = empresaRepository.findOne(1L);
-			System.out.println("Empresa por ID: " + empresaDB);
-
-			empresa.setRazaoSocial("Diego Company WEBDate");
-			this.empresaRepository.save(empresa);
-
-			Empresa empresaCNPJ = empresaRepository.findByCnpj("43423142356776");
-			System.out.println("Empresa por CNPJ: " + empresaCNPJ);
-
-			this.empresaRepository.delete(1L);
-			empresas = empresaRepository.findAll();
-			System.out.println("Empresas: " + empresas.size());
-
-
-
-
-
+//			Empresa empresa = new Empresa();
+//			empresa.setRazaoSocial("Diego Company");
+//			empresa.setCnpj("43423142356776");
+//
+//			this.empresaRepository.save(empresa);
+//
+//			List<Empresa> empresas = empresaRepository.findAll();
+//			empresas.forEach(System.out::println);
+//
+//			Empresa empresaDB = empresaRepository.findOne(1L);
+//			System.out.println("Empresa por ID: " + empresaDB);
+//
+//			empresa.setRazaoSocial("Diego Company WEBDate");
+//			this.empresaRepository.save(empresa);
+//
+//			Empresa empresaCNPJ = empresaRepository.findByCnpj("43423142356776");
+//			System.out.println("Empresa por CNPJ: " + empresaCNPJ);
+//
+//			this.empresaRepository.delete(1L);
+//			empresas = empresaRepository.findAll();
+//			System.out.println("Empresas: " + empresas.size());
 
 		};
 	}

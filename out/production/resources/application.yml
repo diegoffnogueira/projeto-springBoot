@@ -3,3 +3,11 @@ paginacao:
 #spring:
 #  profiles:
 #    active: test
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://localhost:3306/flyway
+    username: root
+    password: Dfreitas2466
