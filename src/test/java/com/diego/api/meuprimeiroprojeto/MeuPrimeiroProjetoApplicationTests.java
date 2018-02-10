@@ -9,21 +9,21 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@ActiveProfiles("test")
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
+//@ActiveProfiles("test")
 public class MeuPrimeiroProjetoApplicationTests {
 
-    @Value("${paginacao.qtd_por_pagina}")
-    private int qtdPorPagina;
-
-	@Test
-	public void contextLoads() {
-	}
-
-	@Test
-	public void testeCarregarContextoDeTeste(){
-	    assertEquals(100, qtdPorPagina);
-    }
+//    @Value("${paginacao.qtd_por_pagina}")
+//    private int qtdPorPagina;
+//
+//	@Test
+//	public void contextLoads() {
+//	}
+//
+//	@Test
+//	public void testeCarregarContextoDeTeste(){
+//	    assertEquals(100, qtdPorPagina);
+//    }
 
 }
