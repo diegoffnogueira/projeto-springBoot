@@ -4,10 +4,12 @@ paginacao:
 #  profiles:
 #    active: test
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: none
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
   datasource:
     url: jdbc:mysql://localhost:3306/flyway
     username: root
     password: Dfreitas2466
+    hikari:
+      maximun-pool-size: 25
