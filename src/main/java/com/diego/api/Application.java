@@ -2,6 +2,7 @@ package com.diego.api;
 
 import com.diego.api.entities.Empresa;
 import com.diego.api.repositories.EmpresaRepository;
+import com.diego.api.services.ExemploService;
 import com.diego.api.utils.SenhaUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,8 +19,11 @@ public class Application {
 	@Value("${paginacao.qtd_por_pagina}")
 	private int qtdPorPagina;
 
+//	@Autowired
+//	private EmpresaRepository empresaRepository;
+
 	@Autowired
-	private EmpresaRepository empresaRepository;
+	private ExemploService exemploService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -35,6 +39,8 @@ public class Application {
 			senhaEncoded = SenhaUtils.gerarBcrypt("123456");
 			System.out.println("### Senha encoded novamente: " + senhaEncoded);
 			System.out.println("### Senha válida: " + SenhaUtils.senhaValida("123456", senhaEncoded));
+
+			this.exemploService.testaSevico();
 
 //			Empresa empresa = new Empresa();
 //			empresa.setRazaoSocial("Diego Company");

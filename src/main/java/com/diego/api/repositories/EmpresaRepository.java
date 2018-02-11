@@ -1,10 +1,10 @@
 package com.diego.api.repositories;
 
 import com.diego.api.entities.Empresa;
-import org.springframework.data.jpa.repository.JpaRepository;
+//import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EmpresaRepository extends JpaRepository<Empresa, Long>{
+public interface EmpresaRepository /*extends JpaRepository<Empresa, Long>*/{
 
-    Empresa findByCnpj(String cnpj);
+//    Empresa findByCnpj(String cnpj);
 
 }
